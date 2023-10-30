@@ -123,7 +123,7 @@ https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 
 3. 디코더 계열모델 생성결과 후처리
    - clean_decoder.sh 스크립트를 실행합니다.
-   - 
+     
    ```
    bash clean_decoder.sh
    ```
