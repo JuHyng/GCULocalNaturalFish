@@ -13,6 +13,7 @@ https://huggingface.co/paust/pko-t5-large
 KULLM-Polyglot-12.8B-v2 (12.8B):  EleutherAI의 polyglot-ko-12.8b 사전학습 모델에 Low Rank Adaptation (LoRA)를 이용하여 GPT4ALL, Dolly, Vicuna 데이터셋 학습
 https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
 
+'''
 ├── clean_decoder_result.py
 ├── clean_decoder.sh
 ├── data
@@ -45,6 +46,7 @@ https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
 ├── train.sh
 ├── upload_model.py
 └── upload_model.sh
+'''
 
 #### 앙상블 모델 (Semantic Textual Similarity Voting)
 
