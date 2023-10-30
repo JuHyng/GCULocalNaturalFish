@@ -44,9 +44,12 @@ https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 
 ###	라이브러리
 
--Python 3.9.0 
+-Python 3.9.0
+
 -Transformers 4.33.0 
+
 -Pytorch 2.0.1 
+
 -PEFT 0.5.0 
 
 ## SeGOESSi (Sentence Generation Output Ensembling by Semantic Similarity)
@@ -120,16 +123,20 @@ https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 
 3. 디코더 계열모델 생성결과 후처리
    - clean_decoder.sh 스크립트를 실행합니다.
+   - 
    ```
    bash clean_decoder.sh
    ```
+   
    - Auto-regressivie decoder 계열 특성 상 프롬프트 템플릿 뒤에 붙혀 생성되어 이를 제거하도록 스크립트를 작성하였습니다.
    - 디코더 모델 출력의 '### 응답:\\n' 이전의 문자열이 제거됩니다.
 
 4. 앙상블 진행
    - ensemble.sh 스크립트를 실행합니다.
+     
    ```
    bash ensemble.sh
    ```
-   - 추론할 파일 ./data/test.jsonl에 대해 검증용 폴더 ./submission/validation 하위에 있는 생성 결과들로 앙상블 voting이 진행됩니다/
+   
+   - 추론할 파일 ./data/test.jsonl에 대해 검증용 폴더 ./submission/validation 하위에 있는 생성 결과들로 앙상블 voting이 진행됩니다.
    - 최종 출력파일 ./submission/validation/최종꼬시.jsonl 파일이 생성됩니다.
