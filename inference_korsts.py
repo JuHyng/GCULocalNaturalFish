@@ -8,7 +8,7 @@ from transformers import ElectraModel, AutoTokenizer, ElectraTokenizer, ElectraF
 
 max_seq_length = 128
 tokenizer = AutoTokenizer.from_pretrained("daekeun-ml/koelectra-small-v3-korsts")
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 # Huggingface pre-trained model: 'monologg/koelectra-small-v3-discriminator'
