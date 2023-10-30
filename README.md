@@ -81,7 +81,7 @@ https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 1.데이터 폴더 준비 및 conda 가상환경 설정
    - data 폴더내에 업로드된 데이터파일을 추가합니다.
      ```
-    data/
+      data/
       ├── train.jsonl
       ├── dev.jsonl
       └── test.jsonl
@@ -94,18 +94,42 @@ https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 
 2. 각 모델 별 추론
    - inference.sh 스크립트를 실행합니다.
+   ```
+   bash inference.sh
+   ```
    - 실행 시 최종출력에 필요한 모델 생성 결과들이 자동으로 일괄적으로 생성됩니다.
    - 제출용 파일 폴더 ./submission 아래 검증용 폴더 validation이 생성된 후, 아래와 같이 모델/체크포인트/생성 전략 별 생성 결과가 생성됩니다
-   - ./submission
-   - ㄴ validation
-   -   ㄴ
+   ```
+   submission/
+   ├── validation/
+   │   ├── 또다시_보리숭어-28800-nb8.jsonl
+   │   ├── 돌아온_은갈치-32400-k10p92.jsonl
+   │   ├── 돌아온_은갈치-32400-nb16.jsonl
+   │   ├── 돌아온_은갈치-32400-nb8.jsonl
+   │   ├── 또다시_보리숭어-32400-nb8.jsonl
+   │   ├── 또다시_보리숭어-34200-nb12.jsonl
+   │   ├── 망치상어-4270-1.jsonl
+   │   ├── 망치상어-4270-2.jsonl
+   │   ├── 망치상어-4270-3.jsonl
+   │   ├── 망치상어-4450-1.jsonl
+   │   ├── 망치상어-4450-2.jsonl
+   │   ├── 망치상어-4450-3.jsonl
+   │   ├── 돌아온_은갈치-45000-nb12.jsonl
+   │   └── 또다시_보리숭어-45000-nb12.jsonl
+   ```
 
 3. 디코더 계열모델 생성결과 후처리
    - clean_decoder.sh 스크립트를 실행합니다.
+   ```
+   bash clean_decoder.sh
+   ```
    - Auto-regressivie decoder 계열 특성 상 프롬프트 템플릿 뒤에 붙혀 생성되어 이를 제거하도록 스크립트를 작성하였습니다.
    - 디코더 모델 출력의 '### 응답:\\n' 이전의 문자열이 제거됩니다.
 
 4. 앙상블 진행
    - ensemble.sh 스크립트를 실행합니다.
+   ```
+   bash ensemble.sh
+   ```
    - 추론할 파일 ./data/test.jsonl에 대해 검증용 폴더 ./submission/validation 하위에 있는 생성 결과들로 앙상블 voting이 진행됩니다/
    - 최종 출력파일 ./submission/validation/최종꼬시.jsonl 파일이 생성됩니다.
