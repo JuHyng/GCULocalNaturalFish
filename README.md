@@ -2,18 +2,6 @@
 
 2023 국립국어원 인공지능 경진대회 모두의 말뭉치 SC 이야기 생성 '국내산 자연어'팀
 
-###	모델 스펙
-
-#### Backbone 모델 (사전학습 모델)
-
-Pko-t5-large (800M): 나무위키, 위키피디아, 모두의 말뭉치 등을 사전학습한 t5 v1.1 모델
-
-https://huggingface.co/paust/pko-t5-large
-
-KULLM-Polyglot-12.8B-v2 (12.8B):  EleutherAI의 polyglot-ko-12.8b 사전학습 모델에 Low Rank Adaptation (LoRA)를 이용하여 GPT4ALL, Dolly, Vicuna 데이터셋 학습
-
-https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
-
 ```
 ├── clean_decoder_result.py
 ├── clean_decoder.sh
@@ -37,6 +25,20 @@ https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
 ├── upload_model.py
 └── upload_model.sh
 ```
+
+###	모델 스펙
+
+#### Backbone 모델 (사전학습 모델)
+
+Pko-t5-large (800M): 나무위키, 위키피디아, 모두의 말뭉치 등을 사전학습한 t5 v1.1 모델
+
+https://huggingface.co/paust/pko-t5-large
+
+KULLM-Polyglot-12.8B-v2 (12.8B):  EleutherAI의 polyglot-ko-12.8b 사전학습 모델에 Low Rank Adaptation (LoRA)를 이용하여 GPT4ALL, Dolly, Vicuna 데이터셋 학습
+
+https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
+
+
 
 #### 앙상블 모델 (Semantic Textual Similarity Voting)
 
