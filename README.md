@@ -16,15 +16,6 @@ https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
 ```
 ├── clean_decoder_result.py
 ├── clean_decoder.sh
-├── data
-│   ├── dev.jsonl
-│   ├── nikluge-sc-2023-test.jsonl
-│   ├── sample2.jsonl
-│   ├── sample.jsonl
-│   ├── test.jsonl
-│   ├── test_sample.jsonl
-│   ├── train+dev.jsonl
-│   └── train.jsonl
 ├── ensemble.py
 ├── ensemble.sh
 ├── environment.yaml
@@ -32,7 +23,7 @@ https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
 ├── inference.py
 ├── inference.sh
 ├── logfile.log
-├── modules
+├── modules/
 │   ├── arg_parser.py
 │   ├── dataset_preprocessor.py
 │   ├── logger_module.py
@@ -41,8 +32,6 @@ https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
 ├── README.md
 ├── results
 ├── run.py
-├── submission
-│   └── validation
 ├── train.sh
 ├── upload_model.py
 └── upload_model.sh
@@ -56,10 +45,10 @@ https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 
 ###	라이브러리 
 
-	Python 3.9.0
-	Transformers 4.33.0
-	Pytorch 2.0.1
-	PEFT 0.5.0
+-Python 3.9.0
+-Transformers 4.33.0
+-Pytorch 2.0.1
+-PEFT 0.5.0
 
 ## SeGOESSi (Sentence Generation Output Ensembling by Semantic Similarity)
 
@@ -88,9 +77,19 @@ https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 
 과정 상세 설명
 
-1. 데이터 폴더 준비
+1.데이터 폴더 준비 및 conda 가상환경 설정
    - data 폴더내에 업로드된 데이터파일을 추가합니다.
-   - train.jsonl,val.jsonl,test.jsonl
+     ```
+    data/
+      ├── train.jsonl
+      ├── dev.jsonl
+      └── test.jsonl
+     ```
+   - conda 가상 환경을 설치 후 activate 합니다.
+     ```
+       conda env create --file environment.yaml
+       conda activate ryu
+     ```
 
 2. 각 모델 별 추론
    - inference.sh 스크립트를 실행합니다.
