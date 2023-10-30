@@ -4,6 +4,9 @@ export model_name='망치상어'
 
 export model_ckpt_path='togru'/$serial-$checkpoint
 export model='nlpai-lab/kullm-polyglot-12.8b-v2'
+
+# 제출용 폴더에 최종 검증용 파일 모음
+mkdir -p submission/validation
 export date='validation'
 
 export prompt="### 명령어:\n두 문장 사이에 생략된 문장을 생성하시오\n\n### 입력:\nsent1 sent3\n\n### 응답:\nlabel"
