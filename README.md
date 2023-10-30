@@ -43,12 +43,12 @@ https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
 daekeun-ml/koelectra-small-v3-korsts: 34GB의 한국어 text를 학습한 monologg/KoELECTRA의 small scale 모델을 KakaoBrain의 KorSTS 데이터셋으로 finetuning한 모델
 https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 
-###	라이브러리 
+###	라이브러리
 
--Python 3.9.0
--Transformers 4.33.0
--Pytorch 2.0.1
--PEFT 0.5.0
+-Python 3.9.0
+-Transformers 4.33.0
+-Pytorch 2.0.1
+-PEFT 0.5.0
 
 ## SeGOESSi (Sentence Generation Output Ensembling by Semantic Similarity)
 
