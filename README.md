@@ -5,13 +5,50 @@
 ###	모델 스펙
 
 #### Backbone 모델 (사전학습 모델)
+
+
 Pko-t5-large (800M): 나무위키, 위키피디아, 모두의 말뭉치 등을 사전학습한 t5 v1.1 모델
 https://huggingface.co/paust/pko-t5-large
 
 KULLM-Polyglot-12.8B-v2 (12.8B):  EleutherAI의 polyglot-ko-12.8b 사전학습 모델에 Low Rank Adaptation (LoRA)를 이용하여 GPT4ALL, Dolly, Vicuna 데이터셋 학습
 https://huggingface.co/nlpai-lab/kullm-polyglot-12.8b-v2
 
+├── clean_decoder_result.py
+├── clean_decoder.sh
+├── data
+│   ├── dev.jsonl
+│   ├── nikluge-sc-2023-test.jsonl
+│   ├── sample2.jsonl
+│   ├── sample.jsonl
+│   ├── test.jsonl
+│   ├── test_sample.jsonl
+│   ├── train+dev.jsonl
+│   └── train.jsonl
+├── ensemble.py
+├── ensemble.sh
+├── environment.yaml
+├── inference_korsts.py
+├── inference.py
+├── inference.sh
+├── logfile.log
+├── modules
+│   ├── arg_parser.py
+│   ├── dataset_preprocessor.py
+│   ├── logger_module.py
+│   ├── trainer.py
+│   └── utils.py
+├── README.md
+├── results
+├── run.py
+├── submission
+│   └── validation
+├── train.sh
+├── upload_model.py
+└── upload_model.sh
+
 #### 앙상블 모델 (Semantic Textual Similarity Voting)
+
+
 daekeun-ml/koelectra-small-v3-korsts: 34GB의 한국어 text를 학습한 monologg/KoELECTRA의 small scale 모델을 KakaoBrain의 KorSTS 데이터셋으로 finetuning한 모델
 https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 
@@ -21,7 +58,6 @@ https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 	Transformers 4.33.0
 	Pytorch 2.0.1
 	PEFT 0.5.0
-
 
 ## SeGOESSi (Sentence Generation Output Ensembling by Semantic Similarity)
 
