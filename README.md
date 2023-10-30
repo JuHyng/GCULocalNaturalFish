@@ -51,16 +51,18 @@ https://huggingface.co/daekeun-ml/koelectra-small-v3-korsts
 
 ## SeGOESSi (Sentence Generation Output Ensembling by Semantic Similarity)
 
-적용 방법론: 문장 생성 결과의 의미적 유사도 기반 앙상블 기법
+<h3>문장 생성 결과의 의미적 유사도 기반 앙상블 기법</h3>
 
 일반적인 텍스트 생성 모델은 생성 결과가 하나의 완전한 문장임으로 일반적인 앙상블 기법을 사용할 수 없어, 현재까지 문장 생성 모델의 앙상블 기법은 아직까지 국내외로 알려진 바가 없습니다. 
 본 국내산 자연어 팀은 이야기 생성 과제에서 단일 모델들이 아래와 같은 다양한 방법과 조건 환경에서 학습될 수 있고, 이때 각각 다른 생성결과가 나온 다는 점을 주목하였습니다.
 
-![image](https://github.com/JuHyng/GCULocalNaturalFish/assets/90828283/326303aa-f0c5-41c5-9008-96e1f5877cfe)
+![image](https://github.com/JuHyng/GCULocalNaturalFish/assets/90828283/7ae21f7b-6279-4092-bb17-cfb1444cf741)
+
 
 각 개별 모델의 생성된 완성 문장들의 텍스트 의미적 유사도 (Semantic Textual Similarity)를 기반으로 보팅하는 방식을 고안하여 적용하였습니다. 
 
-![image](https://github.com/JuHyng/GCULocalNaturalFish/assets/90828283/64ff4ae8-215f-45d1-ae66-6d9b3594ad68)
+![image](https://github.com/JuHyng/GCULocalNaturalFish/assets/90828283/58c02c6b-762f-4873-a5f3-1b4c6627e202)
+
 
 
 
